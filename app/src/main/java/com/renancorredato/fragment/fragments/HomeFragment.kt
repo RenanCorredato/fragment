@@ -1,10 +1,13 @@
 package com.renancorredato.fragment.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.add
+import androidx.fragment.app.commit
 import com.renancorredato.fragment.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -16,8 +19,18 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.button.setOnClickListener {
+            childFragmentManager.commit {
+                setReorderingAllowed(true)
+                add<ProfileFragment>(binding.fragmentContainerView2.id)
+            }
+        }
     }
 }
