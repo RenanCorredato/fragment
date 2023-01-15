@@ -19,10 +19,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        if (savedInstanceState == null)
-        supportFragmentManager.commit {
-            setReorderingAllowed(true)
-            add<LifecycleFragment>(R.id.fragmentContainerView)
-        }
+//        if (savedInstanceState == null) {
+//            supportFragmentManager.commit {
+//                setReorderingAllowed(true)
+//                add<LifecycleFragment>(R.id.fragmentContainerView)
+//            }
+//        }
     }
 }

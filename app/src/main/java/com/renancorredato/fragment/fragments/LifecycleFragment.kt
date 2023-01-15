@@ -1,6 +1,8 @@
 package com.renancorredato.fragment.fragments
 
+import android.content.Context
 import android.os.Bundle
+import android.util.AttributeSet
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -73,5 +75,11 @@ class LifecycleFragment : Fragment(){
     override fun onDestroy() {
         super.onDestroy()
         Log.i(TAG,"onDestroy")
+    }
+
+    override fun onInflate(context: Context, attrs: AttributeSet, savedInstanceState: Bundle?) {
+        super.onInflate(context, attrs, savedInstanceState)
+
+        Log.i(TAG,"onInflate")
     }
 }
