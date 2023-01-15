@@ -6,6 +6,7 @@ import androidx.fragment.app.add
 import androidx.fragment.app.commit
 import com.renancorredato.fragment.databinding.ActivityMainBinding
 import com.renancorredato.fragment.fragments.HomeFragment
+import com.renancorredato.fragment.fragments.LifecycleFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,8 +22,7 @@ class MainActivity : AppCompatActivity() {
         if (savedInstanceState == null)
         supportFragmentManager.commit {
             setReorderingAllowed(true)
-            add<HomeFragment>(R.id.fragmentContainerView)
+            add<LifecycleFragment>(R.id.fragmentContainerView)
         }
-
     }
 }
