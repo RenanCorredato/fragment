@@ -2,9 +2,15 @@ package com.renancorredato.fragment
 
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.os.bundleOf
+import androidx.core.view.MenuProvider
 import androidx.fragment.app.add
 import androidx.fragment.app.commit
+import androidx.fragment.app.replace
 import com.renancorredato.fragment.databinding.ActivityMainBinding
 import com.renancorredato.fragment.fragments.HomeFragment
 import com.renancorredato.fragment.fragments.RegisterFragment
@@ -19,34 +25,43 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        binding.home.setOnClickListener {
-            supportFragmentManager.commit {
-                setReorderingAllowed(true)
-                add<HomeFragment>(binding.fragmentContainerView.id)
-                addToBackStack(null)
-            }
-        }
+        //desativar action em um layout
+        supportActionBar?.hide()
 
-        binding.register.setOnClickListener {
-            supportFragmentManager.commit {
-                setReorderingAllowed(true)
-                add<RegisterFragment>(binding.fragmentContainerView.id)
-                addToBackStack(null)
-            }
-        }
-
-        binding.logs.setOnClickListener {
-
-            supportFragmentManager.popBackStack()
- //           showBackstackFragments()
-
-        }
-    }
-
-    private fun showBackstackFragments() {
-        Log.i("Renan", "-----------------------------------------------------------------------")
-        supportFragmentManager.fragments.forEach {
-            Log.i("Renan", it.toString())
-        }
+//        setupActionBar()
+//
+//    }
+//
+//    private fun setupActionBar() {
+//        addMenuProvider(object : MenuProvider {
+//            override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
+//                menuInflater.inflate(R.menu.menu_home, menu)
+//            }
+//
+//            override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
+////                Log.i("Renan",menuItem.title.toString())
+//                when (menuItem.itemId) {
+//                    R.id.action_salve -> {
+////                        save()
+//                    }
+//
+//                    R.id.action_setting -> {
+//                        menuItem.isCheckable = !menuItem.isCheckable
+//                    }
+//                }
+//
+//                return true
+//            }
+//
+//        })
+//    }
+//
+////    private fun openSetting() {
+////        TODO("Not yet implemented")
+////    }
+////
+////    private fun save() {
+////        TODO("Not yet implemented")
+////    }
     }
 }

@@ -3,17 +3,40 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#FF6347"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FF7">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="RegisterFragment"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="16dp"
+        android:hint="Nome completo"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtAge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:inputType="textPersonName"
+        android:hint="Idade"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtName" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtAge" />
 </androidx.constraintlayout.widget.ConstraintLayout>
