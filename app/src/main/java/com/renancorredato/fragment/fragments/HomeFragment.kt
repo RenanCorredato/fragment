@@ -1,11 +1,13 @@
 package com.renancorredato.fragment.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.commit
+import androidx.preference.PreferenceManager
+import com.renancorredato.fragment.R
 import com.renancorredato.fragment.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -16,19 +18,17 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        activity?.title = getString(R.string.app_name)
 
-        binding.button.setOnClickListener {
-            childFragmentManager.commit {
-                setReorderingAllowed(true)
-              //  add<ProfileFragment>(binding.fragmentContainerView2.id)
-            }
-        }
+        val preferenceManager = PreferenceManager.getDefaultSharedPreferences(requireContext())
+
+        Log.i("Renan",preferenceManager.getBoolean("check_box_preference_1",false).toString())
     }
 }

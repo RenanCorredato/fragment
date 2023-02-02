@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="Mensagens">
+        <Preference
+            android:fragment="com.renancorredato.fragment.PreferenceMessageFragment"
+            android:key="preferece"
+            android:summary="Configurções das mensagenste de textos"
+            android:title="Mensagens"
+            app:icon="@drawable/ic_message" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Notificação"
+        app:iconSpaceReserved="false">
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:icon="@drawable/ic_chat_alert"
+        android:key="check_box_preference_1"
+        android:summary="Receber notificações"
+        android:title="Notificações de Chat" >
+        <intent
+            android:targetClass="com.renancorredato.fragment.PolicyActivity"
+            android:targetPackage="com.renancorredato.fragment"/>
+        <extra
+            android:name="chave"
+            android:value="valor"/>
+
+    </CheckBoxPreference>
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="switch_preference_1"
+            android:title="Vibrar aparelho"
+            app:iconSpaceReserved="false">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://www.trivago.com.br"/>
+        </SwitchPreference>
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="check_box_preference_2"
+            android:summary="Sem o icone da esquerda"
+            android:title="Sem icone"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+
+
+
+    <EditTextPreference
+        android:defaultValue="valor padrão"
+        android:key="edit_text_preference_1"
+        android:summary="Nome do Aplicativo"
+        android:title="Apelido do  usuário"
+        app:iconSpaceReserved="false" />
+
+    <ListPreference
+        android:defaultValue="pt"
+        android:entries="@array/languages"
+        android:entryValues="@array/languagesValues"
+        android:key="list_preference"
+        android:title="Idioma da aplicação"
+        app:iconSpaceReserved="false" />
+
+    <MultiSelectListPreference
+        android:defaultValue="@array/defaultLanguagesValues"
+        android:entries="@array/languages"
+        android:entryValues="@array/languagesValues"
+        android:key="mult_list_preference"
+        android:title="Idioma da aplicação" />
+
+    <DropDownPreference
+        android:entries="@array/languages"
+        android:entryValues="@array/languagesValues"
+        android:key="dropdown_list_preference"
+        android:title="Idioma da aplicação"
+        app:iconSpaceReserved="false" />
+
+    <SeekBarPreference
+        app:allowDividerAbove="true"
+        app:iconSpaceReserved="false"
+        android:key="seekbar_preference"
+        android:defaultValue="50"
+        android:title="Volume das notificações"/>
+
+</PreferenceScreen>

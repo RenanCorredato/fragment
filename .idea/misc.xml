@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/renan/Desktop/Android Definitivo/Fragment/app/src/main/res/drawable/ic_chat_alert.xml" value="0.244" />
+        <entry key="..\:/Users/renan/Desktop/Android Definitivo/Fragment/app/src/main/res/drawable/ic_message.xml" value="0.173" />
         <entry key="..\:/Users/renan/Desktop/Android Definitivo/Fragment/app/src/main/res/layout/activity_main.xml" value="0.23802083333333332" />
+        <entry key="..\:/Users/renan/Desktop/Android Definitivo/Fragment/app/src/main/res/layout/activity_policy.xml" value="0.23802083333333332" />
         <entry key="..\:/Users/renan/Desktop/Android Definitivo/Fragment/app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="..\:/Users/renan/Desktop/Android Definitivo/Fragment/app/src/main/res/layout/fragment_lifecycle.xml" value="0.23697916666666666" />
         <entry key="..\:/Users/renan/Desktop/Android Definitivo/Fragment/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
@@ -12,6 +15,8 @@
         <entry key="..\:/Users/renan/Desktop/Android Definitivo/Fragment/app/src/main/res/layout/register_fragment.xml" value="0.1" />
         <entry key="..\:/Users/renan/Desktop/Android Definitivo/Fragment/app/src/main/res/menu/menu_home.xml" value="0.23802083333333332" />
         <entry key="..\:/Users/renan/Desktop/Android Definitivo/Fragment/app/src/main/res/menu/menu_register.xml" value="0.23802083333333332" />
+        <entry key="..\:/Users/renan/Desktop/Android Definitivo/Fragment/app/src/main/res/xml/preference_app.xml" value="0.23802083333333332" />
+        <entry key="..\:/Users/renan/Desktop/Android Definitivo/Fragment/app/src/main/res/xml/preference_messagens.xml" value="0.23802083333333332" />
       </map>
     </option>
   </component>
